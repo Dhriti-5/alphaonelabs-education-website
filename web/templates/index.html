@@ -39,6 +39,8 @@
                   </a>
                 {% else %}
                   <a href="{% url 'course_detail' course.slug %}">
+                    <a href="/meetups/">Go to Virtual Meetups</a>
+
                     <img src="{% static 'images/default-course.jpg' %}"
                          alt="{{ course.title }}"
                          class="w-full h-full object-cover"
