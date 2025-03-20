@@ -7,6 +7,7 @@ import subprocess
 import time
 from datetime import timedelta
 from decimal import Decimal
+from django.shortcuts import render
 
 import requests
 import stripe
@@ -129,7 +130,8 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def sitemap(request):
     return render(request, "sitemap.html")
-
+def meetups(request):
+    return render(request, 'meetups.html')
 
 def index(request):
     """Homepage view."""
