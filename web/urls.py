@@ -7,8 +7,12 @@ from django.urls import include, path
 
 from . import admin_views, views
 from .views import GoodsListingView, add_goods_to_cart, sales_analytics, sales_data, streak_detail
-
+from django.urls import path
+from . import views
 # Non-prefixed URLs
+urlpatterns = [
+    path('meetups/', views.meetups, name='meetups'),
+]
 urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")),  # Language selection URLs
     path("captcha/", include("captcha.urls")),  # CAPTCHA URLs should not be language-prefixed
