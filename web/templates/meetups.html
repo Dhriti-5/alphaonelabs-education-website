@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Meetups</title>
+    <link rel="stylesheet" href="{% static 'css/meetups.css' %}">
+</head>
+<body>
+    <div class="meetup-container">
+        <h2>Create a Virtual Meetup</h2>
+        <input type="text" id="session-name" placeholder="Enter session name">
+        <button onclick="createSession()">Create Session</button>
+
+        <h2>Join a Session</h2>
+        <input type="text" id="join-code" placeholder="Enter session code">
+        <button onclick="joinSession()">Join Session</button>
+    </div>
+    <script src="{% static 'js/meetups.js' %}"></script>
+</body>
+</html>
